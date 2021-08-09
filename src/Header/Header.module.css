@@ -1,0 +1,90 @@
+.Header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 'logo search button';
+
+    padding: 40px 0 44px 0;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: #FDFCF3;
+}
+
+.buttonFeed {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 34px;
+    
+    width: 167px;
+    height: 40px;
+
+    background: #FFCE89;
+    border-radius: 12px;
+    
+    margin-right: 14px;
+}
+.buttonFeed img {
+    margin-right: 15px;
+}
+
+.buttonAdd {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 34px;
+    
+    width: 166px;
+    height: 40px;
+
+    background: linear-gradient(135deg, #61B15A 0%, #ADCE74 100%);
+    border-radius: 12px;
+    
+}
+
+.buttonAdd img {
+    margin-right: 15px;
+}
+
+.buttonDiv {
+    grid-area: button;
+    display: flex;
+    justify-self: right;
+}
+
+@media (max-width: 1439px) {
+    .Header {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'logo button'
+                             'search search'
+        ;
+    }
+}
+
+@media (max-width: 320px) {
+    .Header {
+        position: inherit;
+        padding: 20px 0 18px 0;
+    }
+
+    .buttonAdd {
+        width: 135px;
+        height: 30px;
+    }
+
+    .buttonFeed {
+        width: 135px;
+        height: 30px;
+        margin-right: 10px;
+    }
+
+    .buttonDiv {
+        position: fixed;
+        bottom: 10px;
+        z-index: 2;
+        justify-self: normal;
+    }
+}

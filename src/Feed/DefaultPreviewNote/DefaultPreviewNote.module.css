@@ -1,0 +1,155 @@
+.DefaultPreviewNote {
+    width: 325px;
+    height: 280px;
+    
+    filter: drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.1));
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.DefaultPreviewNote .mood {
+    position: absolute;
+    left: 83.38%;
+    right: 4.31%;
+    top: 5%;
+    bottom: 80.71%;
+
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    /* Note: backdrop-filter has minimal browser support */
+    
+    border-radius: 25px;
+}
+
+.DefaultPreviewNote .mood .MoodSpan {
+    position: relative;
+    left: 7px;
+    top: 8px;
+    width: 18px;
+    height: 21px;
+
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #000000;
+}
+
+.DefaultPreviewNote .info {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 76.79%;
+    bottom: 0%;
+    
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    /* Note: backdrop-filter has minimal browser support */
+    
+    border-radius: 12px;
+}
+
+.DefaultPreviewNote .title {
+    margin: 0;
+    position: absolute;
+    left: 14px;
+    top: 12px;
+
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    /* identical to box height */
+    
+    
+    /* text */
+    
+    color: #1E2022;
+}
+
+.DefaultPreviewNote .date {
+    margin: 0;
+    position: absolute;
+    right: 14px;
+    top: 15px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 14px;
+    /* identical to box height */
+    
+    
+    /* text */
+    
+    color: #1E2022;
+}
+
+.DefaultPreviewNote .text {
+    margin: 0;
+    position: absolute;
+    left: 14px;
+    top: 39px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    
+    /* text */
+    
+    color: #1E2022;
+}
+
+@media (max-width: 1439px) {
+    .DefaultPreviewNote {
+        width: 422px;
+        height: 364px;    
+    }
+
+    .DefaultPreviewNote .mood {
+        position: absolute;
+        left: 87.2%;
+        right: 3.32%;
+        top: 3.85%;
+        bottom: 85.16%;
+    }
+}
+
+@media (max-width: 320px) {
+    .DefaultPreviewNote {
+        width: 278px;
+        height: 240px;
+    }
+
+    .DefaultPreviewNote .mood {
+        width: 40px;
+        height: 40px;
+        left: 80.58%;
+        right: 5.04%;
+        top: 5.83%;
+        bottom: 77.5%;
+    }
+
+    .DefaultPreviewNote .mood .MoodSpan {
+        width: 18px;
+        height: 18px;
+        right: 25px;
+        top: 10px;
+
+        font-size: 18px;
+        line-height: 21px;
+    }
+}

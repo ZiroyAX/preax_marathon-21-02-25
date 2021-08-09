@@ -1,0 +1,224 @@
+.Note {
+    background: rgba(50, 47, 40, 0.7);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+}
+
+.Note .Modal {
+    width: 1360px;
+    margin: 60px auto 60px auto;
+    padding-bottom: 20px;
+    min-height: 900px;
+    
+    background: #FFFFFF;
+    border-radius: 12px;
+}
+
+.Note .Modal .Close {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    left: 1322px;
+
+    border: none;
+    padding: 0;
+    background-color: transparent;
+}
+
+.Note .Modal .Mood {
+    display: inline-block;
+
+    position: relative;
+    width: 48px;
+    height: 48px;
+    left: 10px;
+    top: 48px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 56px;
+    
+    color: #000000;
+}
+
+.Note .Modal .Title {
+    display: inline-block;
+
+    margin: 0;
+    position: relative;
+    left: 61px;
+    top: 44px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 56px;
+    
+    /* text */
+    
+    color: #1E2022;
+}
+
+.Note .Modal .Date {
+    margin: 0;
+    padding: 0;
+    
+    position: relative;
+    left: 1089px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 28px;
+    
+    /* text */
+    
+    color: #1E2022;
+}
+
+.Note .Modal .Image {
+    margin: 40px;
+    float: left;
+    width: 500px;
+    height: 748px;
+    
+    border-radius: 12px;
+}
+
+.Note .Modal .Text {
+    margin: 40px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+    color: #1E2022;
+}
+
+@media (max-width: 1439px) {
+    .Note .Modal {
+        min-height: inherit;
+        width: 864px;
+        margin: 10% auto 0 auto;
+    }
+    
+    .Note .Modal .Close {
+        left: 822px;
+    }
+    
+    .Note .Modal .Mood {    
+        width: 36px;
+        height: 36px;
+        top: 63px;
+        
+        font-size: 36px;
+        line-height: 42px;
+    }
+    
+    .Note .Modal .Title {
+        left: 70px;
+        top: 60px;
+
+        font-size: 36px;
+        line-height: 42px;
+    }
+    
+    .Note .Modal .Date {        
+        left: 651px;
+        top: 30px;
+        
+        font-size: 18px;
+        line-height: 21px;
+    }
+    
+    .Note .Modal .Image {
+        float: none;
+        width: 381px;
+        height: 254px;
+        margin-top: 80px;
+    }
+    
+    .Note .Modal .Text {
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
+
+@media (max-width: 320px) {
+    .Note .Modal {
+        padding-bottom: 30px;
+        min-height: inherit;
+        width: 320px;
+        margin: 0 auto 0 auto;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 10fr 1fr;
+        grid-template-areas: 'img img img img'
+                             '... mood title close'
+                             '... ... date date'
+                             '... text text ...'
+        ;
+    }
+    
+    .Note .Modal .Close {
+        position: inherit;
+        left: 276px;
+        top: 233px;
+
+        grid-area: close;
+    }
+    
+    .Note .Modal .Mood {
+        position: inherit;
+        font-size: 18px;
+        line-height: 21px;
+
+        grid-area: mood;
+    }
+    
+    .Note .Modal .Title {
+        position: inherit;
+        margin: 0;
+        font-size: 18px;
+        line-height: 21px;
+
+        grid-area: title;
+    }
+    
+    .Note .Modal .Date {
+        position: inherit;
+        margin: 0;
+        padding: 0;
+        font-size: 12px;
+        line-height: 14px;
+
+        grid-area: date;
+    }
+    
+    .Note .Modal .Image {
+        margin: 0;
+        margin-bottom: 20px;
+        width: 320px;
+        height: 214px;
+
+        grid-area: img;
+    }
+    
+    .Note .Modal .Text {
+        margin: 0;
+        font-size: 16px;
+        line-height: 19px;
+        padding: 10px 0 0 0;
+        grid-area: text;
+    }
+}

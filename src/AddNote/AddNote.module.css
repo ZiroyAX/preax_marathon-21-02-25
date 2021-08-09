@@ -1,0 +1,142 @@
+.AddNote {
+    display: grid;
+    grid-template-columns: 1fr 2fr 6fr 6fr 1fr 1fr;
+    grid-template-rows: 60px 60px 1fr 1fr;
+    grid-template-areas: 'title title title search search searchButton'
+                         'mood date ... gallery gallery gallery'
+                         'text text text gallery gallery gallery'
+                         '... ... addButton gallery gallery gallery'
+    ;
+    gap: 20px;
+}
+
+.AddNote .title {
+    grid-area: title;
+    height: 54px;
+    background: #FFFFFF;
+    border-radius: 12px;
+}
+
+.AddNote .mood {
+    grid-area: mood;
+    width: 100px;
+    height: 60px;
+    background: #FFFFFF;
+    border-radius: 12px;
+}
+
+.AddNote .date {
+    grid-area: date;
+    width: 205px;
+    height: 56px;
+    background: #FFFFFF;
+    border-radius: 12px;
+
+}
+
+.AddNote .text {
+    grid-area: text;
+    background: #FFFFFF;
+    border-radius: 12px;
+    min-height: 478px;
+    max-height: 1000px;
+}
+
+.AddNote .addButton {
+    grid-area: addButton;
+    justify-self: right;
+    
+    width: 174px;
+    height: 40px;
+
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+
+.AddNote .search {
+    grid-area: search;
+    background: #FFFFFF;
+    border-radius: 12px;
+    height: 54px;
+}
+
+.AddNote .searchButton {
+    grid-area: searchButton;
+    width: 60px;
+    height: 60px;
+    
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+
+.AddNote .gallery {
+    grid-area: gallery;
+    min-width: 670px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 330px);
+    grid-auto-rows: 220px;
+    gap: 10px;
+    justify-content: center;
+}
+
+@media (max-width: 1439px) {
+    .AddNote {
+        grid-template-columns: 1fr 2fr 6fr 1fr 2fr 1fr;
+        grid-template-rows: 60px 1fr 60px 1fr 60px;
+        grid-template-areas: 'title title title mood date date'
+                             'text text text text text text'
+                             'search search search search search searchButton'
+                             'gallery gallery gallery gallery gallery gallery'
+                             '... ... ... ... addButton addButton'
+        ;
+    }
+}
+
+@media (max-width: 320px) {
+    .AddNote {
+        grid-template-columns: 2fr 2fr 1fr;
+        grid-template-rows: 200px 40px 40px 1fr 40px 40px;
+        grid-template-areas: 'gallery gallery gallery'
+                             'title title title'
+                             'date date mood'
+                             'text text text'
+                             'addButton addButton addButton'
+                             '... ... ...'
+        ;
+        gap: 10px;
+    }
+    .AddNote .title {
+        height: 34px;
+    }
+
+    .AddNote .addButton {
+        justify-self: center;
+    }
+
+    .AddNote .date {
+        width:auto;
+        height: 36px;
+    }
+
+    .AddNote .mood {
+        width: 80px;
+        height: 40px;
+    }
+
+    .AddNote .text {
+        min-height: 238px;
+    }
+
+    .AddNote .imgSmall {
+        width: 278px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+}

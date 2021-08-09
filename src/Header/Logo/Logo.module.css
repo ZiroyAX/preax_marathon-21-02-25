@@ -1,0 +1,19 @@
+.Logo {
+    min-width: 227px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    grid-area: logo;
+}
+
+.text {  
+    margin: 0; 
+    margin-left: 10px; 
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    
+    color: #1E2022;
+}

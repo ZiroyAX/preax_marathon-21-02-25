@@ -1,0 +1,20 @@
+.Feed {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 325px);
+    justify-content: center;
+    gap: 20px;
+    grid-area: feed;
+}
+
+@media (max-width: 1439px) {
+    .Feed {
+        grid-template-columns: repeat(auto-fill, 422px);
+        justify-content: center;
+    }
+}
+
+@media (max-width: 320px) {
+    .Feed {
+        grid-template-columns: repeat(auto-fill, 278px);
+    }
+}

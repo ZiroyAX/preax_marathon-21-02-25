@@ -1,0 +1,63 @@
+.oneImg {
+
+}
+
+.oneImg .currentImg {
+    display: inline-block;
+    position: relative;
+    z-index: 10;
+    left: 38%;
+    top: 35%;
+    width: 60px;
+    height: 60px;
+    visibility: hidden;
+    
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+}
+
+.oneImg:focus .currentImg {
+    visibility: visible;
+}
+
+.oneImg:focus {
+    outline: none;
+}
+
+.oneImg .currentImg svg {
+    position: relative;
+    left: 30%;
+    top: 30%;
+}
+
+.oneImg .currentImg svg path{   
+    background: #FFFFFF;
+}
+
+.oneImg .imgSmall {
+    position: relative;
+    top: -60px;
+    width: 329px;
+    height: 219px;
+    margin: 1%;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+@media (max-width: 320px) {
+    .oneImg .imgSmall {
+        width: 280px;
+    }
+
+    .oneImg {
+        width: 280px;
+    }
+}
+
+/* .imgBig {
+    width: 327px;
+    height: 489px;
+    border-radius: 12px;
+    object-fit: cover;
+} */
